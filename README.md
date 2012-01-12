@@ -38,20 +38,20 @@ Then you can use `short_id`:
 
 ``` ruby
 article.id # 123
-article.short_id # "a-dy"
+article.short_id # "art-dy"
 ```
 
 Decoding the record is straightforward:
 
 ``` ruby
-QuickShort.find("a-dy") # Article:123
+QuickShort.find("art-dy") # Article:123
 ```
 
 By registering multiple prefixes, you can get general short urls and then do something like:
 
 ``` ruby
 def lookup
-  redirect_to QuickShort.find("a-dy")
+  redirect_to QuickShort.find("art-dy")
 end
 ```
 
@@ -59,10 +59,10 @@ If you want something other than `find` or `find_by_short_id`, you can use `look
 
 ``` ruby
 # directly
-QuickShort.lookup("a-dy") # [Article, 123]
+QuickShort.lookup("art-dy") # [Article, 123]
 
 # or with a block
-QuickShort.lookup("a-dy") do |klass, id|
+QuickShort.lookup("art-dy") do |klass, id|
 end
 ```
 
