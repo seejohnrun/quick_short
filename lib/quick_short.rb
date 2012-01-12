@@ -6,6 +6,8 @@ module QuickShort
   autoload :DuplicatePrefix, File.dirname(__FILE__) + '/quick_short/duplicate_prefix'
   autoload :NoSuchPrefix, File.dirname(__FILE__) + '/quick_short/no_such_prefix'
 
+  autoload :VERSION, File.dirname(__FILE__) + '/quick_short/version'
+
   class << self
 
     # The current mapping of short_id_prefixes

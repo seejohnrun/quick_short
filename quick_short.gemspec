@@ -1,7 +1,6 @@
-require 'lib/quick_short/version'
+require File.dirname(__FILE__) + '/lib/quick_short/version'
 
 spec = Gem::Specification.new do |s|
-  
   s.name = 'quick_short'  
   s.author = 'John Crepezzi'
   s.add_development_dependency('rspec')
@@ -16,5 +15,4 @@ spec = Gem::Specification.new do |s|
   s.test_files = Dir.glob('spec/*.rb')
   s.version = QuickShort::VERSION
   s.rubyforge_project = "quick-short"
-
 end
