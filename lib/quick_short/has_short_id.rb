@@ -24,7 +24,8 @@ module QuickShort
       # @return [String] the generated short id
       def short_id
         if id
-          prefix = QuickShort.short_id_prefixes.key(self.class)
+          mthd = {}.methods.include?(:key) ? :key : :index
+          prefix = QuickShort.short_id_prefixes.send(mthd, self.class)
           "#{prefix}-#{QuickShort::ShortId.encode(id)}"
         end
       end
