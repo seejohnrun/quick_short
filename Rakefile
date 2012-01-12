@@ -1,5 +1,8 @@
 require 'rspec/core/rake_task'
 require File.dirname(__FILE__) + '/lib/quick_short/version'
+
+task :default => :test do
+end
  
 task :build => :test do
   system "gem build quick_short.gemspec"
