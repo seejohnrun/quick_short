@@ -1,8 +1,8 @@
-# Quick Short (WORK IN PROGRESS)
+# Quick Short
 
 ## What is this?
 
-This is a Rails gem for creating short urls with no lookup needed.  Its awesome.
+This is a gem for creating short urls with no lookup needed.  Its awesome.
 
 The idea is pretty simple.  Instead of using a short ID lookup table, we change the base of the primary key and use it as a short_id.  You can see more details about the original idea in [this blog post](http://seejohncode.com/2010/04/22/quick-local-short-urls).
 
