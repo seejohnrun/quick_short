@@ -1,3 +1,4 @@
+script: "rspec spec"
 notifications:
   email:
     - john.crepezzi@gmail.com
