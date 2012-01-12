@@ -4,6 +4,7 @@ module QuickShort
   autoload :HasShortId, File.dirname(__FILE__) + '/quick_short/has_short_id'
 
   autoload :DuplicatePrefix, File.dirname(__FILE__) + '/quick_short/duplicate_prefix'
+  autoload :NoSuchPrefix, File.dirname(__FILE__) + '/quick_short/no_such_prefix'
 
   class << self
 
@@ -42,7 +43,7 @@ module QuickShort
           [klass, id] # otherwise, return [klass, id]
         end
       else
-        raise UnregisteredPrefix.new(prefix)
+        raise NoSuchPrefix.new(prefix)
       end
     end
 
